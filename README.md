@@ -23,6 +23,14 @@ cd rendu
 
 ```
 
+# installer le Project
+
+```
+npm install
+
+```
+
+
 # ouvrir le projet 
 
 ```
