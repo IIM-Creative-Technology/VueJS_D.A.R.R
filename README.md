@@ -1,13 +1,31 @@
 # VueJS_D.A.R.R
 
-```npm init vue@latest```
+# installer vue cli
+```
+npm install -g @vue/cli
+
+```
+
+
 # pour créer le projet
 
-```cd D.A.A.R.M.introVue```
-# pour ouvrir le projet dans le terminal
+```
+vue create rendu
 
-```npm install```
-# pour installer le projet
+```
 
-```npm run dev```
-# pour ouvrir le serveur de Development
+
+
+# se déplacer sur le projet
+
+```
+cd rendu
+
+```
+
+# ouvrir le projet 
+
+```
+npm run serve 
+
+```
