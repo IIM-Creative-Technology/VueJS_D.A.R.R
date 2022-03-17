@@ -10,6 +10,18 @@ import Chapter5Vue from './components/Chapter5.vue'
 
 <template>
 <HeaderVue></HeaderVue> 
+<section class="left-bar">
+  <h4>Chapter 1</h4>
+  <span class="Chapter1Gr "></span>
+  <h4>Chapter 2</h4>
+  <span class="Chapter2Gr"></span>
+  <h4>Chapter 3</h4>
+  <span class="Chapter3Gr"></span>
+  <h4>Chapter 4</h4>
+  <span class="Chapter4Gr"></span>
+  <h4>Chapter 5</h4>
+  <span class="Chapter5Gr"></span>
+</section>
 <section class="main">
   <h1>Chapter{{count}}</h1>
   <div class="content">
@@ -28,7 +40,11 @@ import Chapter5Vue from './components/Chapter5.vue'
 </template>
 
 <script>
+  const ch = document.querySelector('h4')
 
+  ch.onclick = function(){
+    ch.className('.selected')
+  }
 </script>
 
 <style>
@@ -90,11 +106,51 @@ body {
 }
 
 .counter{
-  font-style: normal;
   font-weight: 900;
   font-size: 48px;
   text-align: center;
-  color: #000000;
+  color: #000000;  
+  margin: 0;
   margin-left: 20px;
 }
+
+.left-bar{
+  width: 20%;
+  height: 500px;
+  position: absolute;
+  margin-left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 25px;
+}
+
+.left-bar> span{
+  opacity : 0;
+  width: 100%;
+  height: 2px;
+  border-radius:2px solid black;
+
+}
+
+.left-bar >h4:hover {
+  border-bottom: 2px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, #5F8BEF, #42D392);
+}
+
+.selected{
+  border-bottom: 2px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, #5F8BEF, #42D392);
+}
+
+.selected:hover{
+  border: none;
+}
+
+
 </style>
