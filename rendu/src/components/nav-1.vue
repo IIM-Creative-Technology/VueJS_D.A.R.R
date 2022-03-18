@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <a href="" class="logo"><img src="../assets/Vue.js.png" alt=""></a>
+        <a href="" class="logo"><img src="../assets/Vuejs.png" alt=""></a>
         <img src="../assets/test.png">
     </nav>
 </template>
