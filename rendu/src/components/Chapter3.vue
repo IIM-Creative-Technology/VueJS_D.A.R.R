@@ -1,3 +1,9 @@
 <template>
-    <h1></h1>
+    <section class="chapter3"></section>
 </template>
+
+<style>
+.chapter3{
+    background-color:lime;
+}
+</style>

@@ -1,10 +1,12 @@
 <script setup>
 import HeaderVue from './components/nav-1.vue'
+import Chapter0Vue from './components/Chapter0.vue'
 import Chapter1Vue from './components/Chapter1.vue'
 import Chapter2Vue from './components/Chapter2.vue'
 import Chapter3Vue from './components/Chapter3.vue'
 import Chapter4Vue from './components/Chapter4.vue'
 import Chapter5Vue from './components/Chapter5.vue'
+import page5Vue from './components/page5.vue'
 
 </script>
 
@@ -23,28 +25,37 @@ import Chapter5Vue from './components/Chapter5.vue'
   <span class="Chapter5Gr"></span>
 </section>
 <section class="main">
-  <h1>Chapter{{count}}</h1>
+  <h1>Chapter {{count}}</h1>
   <div class="content">
-  <Chapter1Vue></Chapter1Vue> 
-  <Chapter2Vue></Chapter2Vue> 
-  <Chapter3Vue></Chapter3Vue> 
-  <Chapter4Vue></Chapter4Vue> 
-  <Chapter5Vue></Chapter5Vue> 
+    <Chapter1Vue></Chapter1Vue> 
+    <Chapter2Vue></Chapter2Vue> 
+    <Chapter3Vue></Chapter3Vue> 
+    <Chapter4Vue></Chapter4Vue> 
+    <Chapter5Vue></Chapter5Vue> 
   </div>
-  <div class="end">
-      <p class="counter">{{count}}/5</p>
-      <button class="btn-next"><img src="./assets/next.png"></button>
-  </div>
+  
 </section>
-
 </template>
 
 <script>
-  const ch = document.querySelector('h4')
+export default {
+  data(){
+    return{
+      count: 0
+    }
+  },
+  methods:{
+    nextChapter(){
+      
+      console.log(this.count)
 
-  ch.onclick = function(){
-    ch.className('.selected')
-  }
+      if(this.count > 5){
+        this.count = 0
+      }
+    }
+  },
+  
+}
 </script>
 
 <style>
@@ -58,7 +69,7 @@ body {
   width: 30%;
   height: 782px;
   margin: 0 auto;
-  margin-top: -50px;
+  margin-top: -90px;
   background-color: #E4E4E4;
   display: flex;
   justify-self: center;
@@ -71,24 +82,14 @@ body {
   display: flex;
   justify-self: center;
   align-content: center;
+  flex-direction: column;
   width: 100%;
   height: 80%;
-  background-color: red;
 }
 
-
-.end{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  align-self: center;
-  flex-direction: row;
-  margin: 10px;
-}
 
 .btn-next {
-  width: 72px;
+  width: 80px;
   height: 72px;
   border: none;
   background : none;
@@ -103,6 +104,25 @@ body {
 .btn-next > img{
   width: 100%;
   height: 100%;
+}
+
+.btn-before {
+  width: 80px;
+  height: 72px;
+  border: none;
+  background : none;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.btn-before:hover{
+  background : none;
+}
+
+.btn-before > img{
+  width: 100%;
+  height: 100%;
+  transform: rotate(180deg);
 }
 
 .counter{
