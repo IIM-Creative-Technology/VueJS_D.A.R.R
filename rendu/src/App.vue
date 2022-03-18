@@ -23,10 +23,6 @@ import page5Vue from './components/Chapitre1/pages/page5.vue'
   <span class="Chapter2Gr"></span>
   <h4 class="ch" v-on:click="count = 3">Chapitre 3</h4>
   <span class="Chapter3Gr"></span>
-  <h4 class="ch" v-on:click="count = 4">Chapitre 4</h4>
-  <span class="Chapter4Gr"></span>
-  <h4 class="ch" v-on:click="count = 5">Chapitre 5</h4>
-  <span class="Chapter5Gr"></span>
 </section>
 <section class="main">
   <h1>Chapter {{count}}</h1>
@@ -34,8 +30,6 @@ import page5Vue from './components/Chapitre1/pages/page5.vue'
     <Chapter1Vue v-if="count == 1"></Chapter1Vue> 
     <Chapter2Vue v-if="count == 2"></Chapter2Vue> 
     <Chapter3Vue v-if="count == 3" ></Chapter3Vue> 
-    <Chapter4Vue v-if="count == 4"></Chapter4Vue> 
-    <Chapter5Vue v-if="count == 5"></Chapter5Vue> 
   </div>
   
 </section>

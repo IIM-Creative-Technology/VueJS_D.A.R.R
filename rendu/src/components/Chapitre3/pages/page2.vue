@@ -1,7 +1,7 @@
 <template>
 <div class="page3">
     <div class="code-zone">
-                    <br>&lt;script setup&gt;
+        <br>&lt;script setup&gt;
         <br>import { ref, computed } from 'vue'
         <br>import Home from './Home.vue'
         <br>import About from './About.vue'
@@ -32,3 +32,13 @@
 </div>
 
 </template>
+
+<style scoped>
+
+    .page3{
+        overflow-x: hidden;
+    }
+    .code-zone {
+        width: 90%;
+    }
+</style>

@@ -1,6 +1,9 @@
 <script setup>
    import page0Vue from "./pages/page0.vue"
    import page1Vue from "./pages/page1.vue"
+   import page2Vue from "./pages/page2.vue"
+   import page3Vue from "./pages/page3.vue"
+   import page4Vue from "./pages/page4.vue"
 </script>
 
 <template>
