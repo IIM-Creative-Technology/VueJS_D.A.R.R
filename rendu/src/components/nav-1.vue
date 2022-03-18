@@ -1,8 +1,12 @@
 <template>
     <nav>
         <a href="" class="logo"><img src="../assets/Vuejs.png" alt=""></a>
-        <div class="divDm">
-            <input class="dm" type="checkbox" id="dm">
+        <div class="dark" v-if="mode == 1">
+            <input @input="dark" class="dm" type="checkbox" id="dm">
+            <label for="dm"></label>
+        </div>
+        <div class="light" v-if="mode == 0">
+            <input @input="light" class="dm" type="checkbox" id="dm">
             <label for="dm"></label>
         </div>
     </nav>
@@ -20,7 +24,7 @@ nav{
     padding-right: 40px;
 }
 
-.divDm{
+.dark{
     width: 60px;
     height: 25px;
     display: flex;
@@ -34,7 +38,7 @@ nav{
 
 }
 
-.divDm > .dm + label {
+.dark > .dm + label {
     width: 100%;
     height: 100%;
     background-color: black;
@@ -45,7 +49,7 @@ nav{
     padding: 2px;
 }
 
-.divDm > .dm + label::before {
+.dark > .dm + label::before {
     content: " ";
     width: 20px;
     height: 20px;
@@ -59,3 +63,25 @@ nav{
     width: 0;
 }
 </style>
+
+<script>
+export default {
+    data(){
+        return {
+            mode: 0
+        }
+    },
+    methods:{
+        dark(){
+            mode++
+            document.body.style.backgroundColor = "black"
+            document.h4.style.Color = "white"
+        },
+        light(){
+            mode--
+            document.body.style.backgroundColor = "white"
+            document.h4.style.Color = "black"
+        }
+    }
+}
+</script>

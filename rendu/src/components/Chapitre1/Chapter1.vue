@@ -111,7 +111,6 @@ p{
 .page2{
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
 }
 .page3{
     width: 100%;

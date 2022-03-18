@@ -1,16 +1,16 @@
 <script setup>
-    import page0Vue from "./pages/page0.vue"
-    import page1Vue from "./pages/page1.vue"
-    import page2Vue from "./pages/page2.vue"
-    import page3Vue from "./pages/page3.vue"
+   import page0Vue from "./pages/page0.vue"
+   import page1Vue from "./pages/page1.vue"
 </script>
 
 <template>
-    <section class="chapter2">
+    <section class="chapter3">
         <page0Vue v-if="count == 0"></page0Vue>
         <page1Vue v-if="count == 1"></page1Vue>
         <page2Vue v-if="count == 2"></page2Vue>
         <page3Vue v-if="count == 3"></page3Vue>
+        <page4Vue v-if="count == 4"></page4Vue>
+        <page5Vue v-if="count == 5"></page5Vue>
     </section>
     <div class="end">
         <button class="btn-before" v-on:click="count -= 1" @click="beforeChapter" v-if="count > 0"><img src="../../assets/next.png"></button>
@@ -48,17 +48,7 @@ export default {
 }
 </script>
 
-
 <style>
-.page0{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.page2{
-    overflow-y:scroll;
-}
 </style>
+
