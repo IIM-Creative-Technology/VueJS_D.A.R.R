@@ -1,7 +1,10 @@
 <template>
     <nav>
         <a href="" class="logo"><img src="../assets/Vuejs.png" alt=""></a>
-        <img src="../assets/test.png">
+        <div class="divDm">
+            <input class="dm" type="checkbox" id="dm">
+            <label for="dm"></label>
+        </div>
     </nav>
 </template>
 
@@ -15,5 +18,44 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding-right: 40px;
+}
+
+.divDm{
+    width: 60px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.divDm > .dm:checked + label{
+    
+
+}
+
+.divDm > .dm + label {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 25px;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    padding: 2px;
+}
+
+.divDm > .dm + label::before {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.dm{
+    opacity: 0;
+    width: 0;
 }
 </style>

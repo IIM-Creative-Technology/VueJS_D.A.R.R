@@ -1,43 +1,49 @@
 <script setup>
 import HeaderVue from './components/nav-1.vue'
 import Chapter0Vue from './components/Chapter0.vue'
-import Chapter1Vue from './components/Chapter1.vue'
-import Chapter2Vue from './components/Chapter2.vue'
+import Chapter1Vue from './components/Chapitre1/Chapter1.vue'
+import Chapter2Vue from './components/Chapitre2/Chapter2.vue'
 import Chapter3Vue from './components/Chapter3.vue'
 import Chapter4Vue from './components/Chapter4.vue'
 import Chapter5Vue from './components/Chapter5.vue'
-import page5Vue from './components/page5.vue'
+import page5Vue from './components/Chapitre1/pages/page5.vue'
+
+
 
 </script>
+
+
 
 <template>
 <HeaderVue></HeaderVue> 
 <section class="left-bar">
-  <h4>Chapter 1</h4>
-  <span class="Chapter1Gr "></span>
-  <h4>Chapter 2</h4>
+  <h4 class="ch" v-on:click="count = 1">Chapitre 1</h4>
+  <span class="Chapter1Gr"></span>
+  <h4 class="ch" v-on:click="count = 2">Chapitre 2</h4>
   <span class="Chapter2Gr"></span>
-  <h4>Chapter 3</h4>
+  <h4 class="ch" v-on:click="count = 3">Chapitre 3</h4>
   <span class="Chapter3Gr"></span>
-  <h4>Chapter 4</h4>
+  <h4 class="ch" v-on:click="count = 4">Chapitre 4</h4>
   <span class="Chapter4Gr"></span>
-  <h4>Chapter 5</h4>
+  <h4 class="ch" v-on:click="count = 5">Chapitre 5</h4>
   <span class="Chapter5Gr"></span>
 </section>
 <section class="main">
   <h1>Chapter {{count}}</h1>
   <div class="content">
-    <Chapter1Vue v-if="count = 1"></Chapter1Vue> 
-    <Chapter2Vue v-if="count = 2"></Chapter2Vue> 
-    <Chapter3Vue v-if="count = 3" ></Chapter3Vue> 
-    <Chapter4Vue v-if="count = 4"></Chapter4Vue> 
-    <Chapter5Vue v-if="count = 5"></Chapter5Vue> 
+    <Chapter1Vue v-if="count == 1"></Chapter1Vue> 
+    <Chapter2Vue v-if="count == 2"></Chapter2Vue> 
+    <Chapter3Vue v-if="count == 3" ></Chapter3Vue> 
+    <Chapter4Vue v-if="count == 4"></Chapter4Vue> 
+    <Chapter5Vue v-if="count == 5"></Chapter5Vue> 
   </div>
   
 </section>
 </template>
 
 <script>
+
+
 export default {
   data(){
     return{
@@ -47,11 +53,9 @@ export default {
   methods:{
     nextChapter(){
       console.log(this.count)
-      if(this.count > 5){
-        this.count = 0
-      }
     }
   },
+  
   
 }
 </script>
@@ -74,6 +78,7 @@ body {
   align-items: center;
   flex-direction: column;
   border-radius: 65px;
+  position: relative;
 }
 
 .content{
@@ -145,7 +150,7 @@ body {
 }
 
 .left-bar> span{
-  opacity : 0;
+  opacity : 1;
   width: 100%;
   height: 2px;
   border-radius:2px solid black;
