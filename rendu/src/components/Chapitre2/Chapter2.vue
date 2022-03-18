@@ -3,6 +3,7 @@
     import page1Vue from "./pages/page1.vue"
     import page2Vue from "./pages/page2.vue"
     import page3Vue from "./pages/page3.vue"
+    import page4Vue from "./pages/page4.vue"
 </script>
 
 <template>
@@ -11,11 +12,12 @@
         <page1Vue v-if="count == 1"></page1Vue>
         <page2Vue v-if="count == 2"></page2Vue>
         <page3Vue v-if="count == 3"></page3Vue>
+        <page4Vue v-if="count == 4"></page4Vue>
     </section>
     <div class="end">
         <button class="btn-before" v-on:click="count -= 1" @click="beforeChapter" v-if="count > 0"><img src="../../assets/next.png"></button>
-        <p class="counter">{{count}}/5</p>
-        <button class="btn-next" v-on:click="count += 1" @click="nextChapter" v-if="count < 5"><img src="../../assets/next.png"></button>
+        <p class="counter">{{count}}/4</p>
+        <button class="btn-next" v-on:click="count += 1" @click="nextChapter" v-if="count < 4"><img src="../../assets/next.png"></button>
   </div>
 </template>
 
