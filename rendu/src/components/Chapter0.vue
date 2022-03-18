@@ -44,16 +44,6 @@ export default {
     flex-direction: column;
 }
 
-.page2{
-    width: 100%;
-    height: 100%;
-    background-color: blue;
-}
-.page3{
-    width: 100%;
-    height: 100%;
-    background-color: lime;
-}
 
 .end{
   width: 100%;

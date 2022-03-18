@@ -1,23 +1,18 @@
 <script setup>
 import page5 from './page5.vue'
 import page1Vue from './page1.vue'
+import page2Vue from './page2.vue'
+import page3Vue from './page3.vue'
+import page4Vue from './page4.vue'
 import page5Vue from './page5.vue'
-
 </script>
 
 <template>
     <section class="chapter1">
         <page1Vue v-if="count == 1"></page1Vue>
-        <!--
-        <div class="page2" v-if="count == 2">
-            
-        </div>
-        <div class="page3" v-if="count == 3">
-            
-        </div>
-        <div class="page4" v-if="count == 4">
-            
-        </div>-->
+        <page2Vue v-if="count == 2"></page2Vue>
+        <page3Vue v-if="count == 3"></page3Vue>
+        <page4Vue v-if="count == 4"></page4Vue>
         <page5Vue v-if="count == 5"></page5Vue>
     </section>
     <div class="end">
@@ -91,7 +86,6 @@ p{
 
 .code-zone{
     width: 50%;
-    height: 50px;
     background-color: black;
     color: white;
     display: flex;
@@ -105,12 +99,25 @@ p{
 .page2{
     width: 100%;
     height: 100%;
-    background-color: blue;
+    overflow-y: scroll;
 }
 .page3{
     width: 100%;
     height: 100%;
-    background-color: lime;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.page4{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .page5{
     width: 100%;
@@ -143,6 +150,12 @@ p{
     color: green;
 }
 
+
+#yesQ1:checked{
+    width: 0;
+    opacity: 0;
+}
+
 #noQ1:checked + .falseQ1{
     color: red;
 }
@@ -171,6 +184,11 @@ p{
     color: green;
 }
 
+#yesQ2:checked{
+    width: 0;
+    opacity: 0;
+}
+
 #noQ2:checked + .falseQ2{
     color: red;
 }
@@ -197,6 +215,11 @@ p{
 
 #yesQ3:checked + .trueQ3{
     color: green;
+}
+
+#yesQ3:checked{
+    width: 0;
+    opacity: 0;
 }
 
 #noQ3:checked + .falseQ3{

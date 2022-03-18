@@ -1,6 +1,7 @@
 <template>
 
 <div class="page1">
+    <div class="blq"></div>
     <h2>Introduction</h2>
         
 
@@ -41,5 +42,13 @@
 </template>
 
 
+<style>
+.blq{
+    width: 100px;
+    height: 100px;
+    margin-top:300px
+}
+
+</style>
 
 
